@@ -8,6 +8,12 @@ object Functions extends App {
 
   def aParameterlessFunction(): Int = 45
   println(aParameterlessFunction())
-  println(aParameterlessFunction)
+  //println(aParameterlessFunction)
+
+  def aRepeatFunction(aString: String, n: Int): String = {
+    if (n == 1) aString
+    else aString + aRepeatFunction(aString, n-1)
+  }
+  println(aRepeatFunction("London",3))
 
 }
